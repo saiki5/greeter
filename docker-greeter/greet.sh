@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # 実行されるコマンドを表示（デバッグ用）
 # set -x
@@ -15,13 +15,15 @@
 # メイン処理
 # 引数が1つでない場合は使い方を表示して終了
 if [ "$#" -ne 1 ]; then
-  echo "Hello!: $0 <ユーザー名>"
+  # echo "Hello!: $0 <ユーザー名>"
+  echo "Usage: $0 <name>"
   exit 1
 fi
 
 TARGET_USER="$1"
 
-echo "Hello!'$TARGET_USER'"
+# echo "Hello! $TARGET_USER"
+echo "Hello, $TARGET_USER!"
 
 # if "$TARGET_USER"; then
 #   echo "Hello, Jo!'$TARGET_USER'"
